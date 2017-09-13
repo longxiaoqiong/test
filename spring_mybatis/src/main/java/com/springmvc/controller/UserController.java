@@ -17,7 +17,7 @@ import com.springmvc.service.UserService;
 @RequestMapping("/user")  
 public class UserController {  
   
-    @Autowired  
+    @Autowired 
     private UserService userService;  
       
     @RequestMapping("/showInfo/{userId}")  

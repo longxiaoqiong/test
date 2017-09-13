@@ -75,7 +75,7 @@
         where id = #{id,jdbcType=INTEGER}  
     </update>  
   
-    <select id="selectAll" resultMap="UserCourseMap">  
+    <select id="selectAll" resultMap="BaseResultMap">  
         select * from user_info 
     </select>  
 </mapper>  
