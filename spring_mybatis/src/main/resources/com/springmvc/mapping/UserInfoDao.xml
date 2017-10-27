@@ -77,5 +77,16 @@
   
     <select id="selectAll" resultMap="BaseResultMap">  
         select * from user_info 
-    </select>  
+    </select>   
+    
+    <select id="getUserInfoList" resultMap="BaseResultMap"  parameterType="java.util.List">  
+        select * from user_info
+        	<where>
+        		(
+		       <foreach item="item" collection="list" separator="or">
+		      		(uname=#{item.uname, jdbcType=VARCHAR} and unumber=#{item.unumber,jdbcType=INTEGER})
+		       </foreach>
+		       )
+	       </where>
+    </select>   
 </mapper>  

@@ -2,6 +2,8 @@ package com.springmvc.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.springmvc.entity.UserInfo;  
   
 public interface UserInfoDao {  
@@ -19,4 +21,6 @@ public interface UserInfoDao {
     int updateByPrimaryKey(UserInfo record);  
       
     List<UserInfo> selectAll();  
+    
+    List<UserInfo> getUserInfoList(@Param("list")List<UserInfo> list);
 }

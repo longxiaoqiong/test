@@ -1,6 +1,8 @@
 package com.springmvc.service.impl;
 
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +31,9 @@ public class UserServiceImpl implements UserService {
         System.out.println(result);  
         return result;  
     }  
+    
+    public List<UserInfo> getUserInfoList(List<UserInfo> list){
+    	return this.userInfoDao.getUserInfoList(list);
+    }
   
 }  
