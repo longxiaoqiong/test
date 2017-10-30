@@ -1,0 +1,3 @@
+com\springcloud\RibbonApplication.class
+com\springcloud\controller\TestController.class
+com\springcloud\service\TestService.class
