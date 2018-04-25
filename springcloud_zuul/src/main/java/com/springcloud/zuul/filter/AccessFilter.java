@@ -22,11 +22,13 @@ public class AccessFilter extends ZuulFilter  {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         Object accessToken = request.getParameter("accessToken");
+        String obj=request.getParameter("type");
         if(accessToken == null) {
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
             return null;
         }
+        System.out.println(obj+",accessToken...");
         return null;
     }
 }
